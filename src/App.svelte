@@ -53,7 +53,6 @@
       total_m: price * 24 * 30,
     };
 
-    console.log(newInt);
     instances = [...instances, newInt];
   }
 
@@ -116,7 +115,12 @@
   <table>
     <thead>
       <tr>
-        <th>Nr of instances</th>
+        <Th
+          on:select={() => sortBy('numberOfInstances')}
+          selected={isSelected('numberOfInstances')}
+          {sortAsc}>
+          Nr of instances
+        </Th>
         <Th
           on:select={() => sortBy('type')}
           selected={isSelected('type')}
